@@ -1,0 +1,146 @@
+<html, body>
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body, #contact {
+        min-height: 100vh;
+        height: 100vh;
+        width: 100vw;
+        box-sizing: border-box;
+        background:
+          radial-gradient(circle at 20% 30%, #232526 0%, transparent 60%),
+          radial-gradient(circle at 80% 70%, #e3ff0c33 0%, transparent 70%),
+          linear-gradient(120deg, #232526 0%, #1a1a1a 100%);
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        overflow-x: hidden;
+      }
+
+      #contact {
+        padding: 50px 0;
+        text-align: center;
+      }
+
+      #contact h2 {
+        font-size: 32px;
+        color: #e3ff0c;
+        margin-bottom: 18px;
+        letter-spacing: 2px;
+        border-bottom: 2px solid #e3ff0c;
+        display: inline-block;
+        padding-bottom: 8px;
+        background: transparent;
+      }
+
+      #contact p {
+        font-size: 17px;
+        margin-bottom: 24px;
+        color: #eaeaea;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 24px;
+        margin-top: 18px;
+        flex-wrap: wrap;
+      }
+
+      .social-links a {
+        color: #e3ff0c;
+        background: rgba(30,32,34,0.97);
+        border-radius: 18px;
+        border: 2px solid #e3ff0c44;
+        box-shadow: 0 4px 16px #e3ff0c22;
+        padding: 14px 28px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        font-size: 18px;
+        text-decoration: none;
+        transition: 
+          background 0.3s,
+          color 0.3s,
+          box-shadow 0.3s,
+          transform 0.2s;
+      }
+
+      .social-links a:hover {
+        background: #e3ff0c;
+        color: #232526;
+        box-shadow: 0 8px 32px #e3ff0c44;
+        border: 2px solid #e3ff0c;
+        transform: translateY(-2px) scale(1.05);
+      }
+
+      .social-links i {
+        font-size: 22px;
+      }
+
+      @media (max-width: 900px) {
+        #contact {
+          padding: 32px 0;
+        }
+        .social-links {
+          gap: 16px;
+        }
+        .social-links a {
+          padding: 12px 18px;
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        #contact {
+          padding: 18px 0;
+        }
+        #contact h2 {
+          font-size: 22px;
+          padding-bottom: 6px;
+        }
+        #contact p {
+          font-size: 15px;
+          max-width: 98vw;
+        }
+        .social-links {
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+        }
+        .social-links a {
+          font-size: 14px;
+          padding: 8px 0;
+          width: 70vw;
+          min-width: 120px;
+          max-width: 240px;
+          justify-content: center;
+        }
+        .social-links i {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section id="contact">
+      <h2>Yuk Terhubung!</h2>
+      <p>Jangan sungkan, stalk akun sosmed aku di bawah ini. Siapa tau kita bisa ngoding bareng atau sekadar ngobrol santai </p>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/dalfuserrx?igsh=Z2RhM25vM2ZxNWFi" target="_blank">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </section>
+  </body>
+</html>

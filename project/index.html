@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haidar Al Farisi | Portfolio</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+   <div class="container"></div>
+  <header>
+    <div class="navbar">
+    
+<ul class="nav-links">
+  <li><a href="index.html" onclick="showSection('home')">Home</a></li>
+  <li><a href="aboutme.html" onclick="showSection('about')">About</a></li>
+  <li><a href="contact.html" onclick="showSection('contact')">Contact</a></li>
+</ul>
+
+    </div>
+  </header>
+
+
+<section id="home"> 
+  <section class="hero">
+    <div class="content">
+      <h1><span>Haidar</span><br /> Habibi Al Farisi<span>.</span></h1>
+      <p id="typing-text"></p>
+      
+      <div class="socials">
+        <a href="https://github.com/haidaralfff"><i class="fab fa-github"></i></a>
+        <a href="https://www.instagram.com/dalfuserrx?igsh=Z2RhM25vM2ZxNWFi"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@darzzkun?_t=ZS-8xTU7OE4tB1&_r=1"><i class="fab fa-tiktok"></i></a>
+      </div>
+
+      <div class="role">
+        <h3> Calon Fullstack Developer</h3>
+        <p>Santai boleh, tapi jangan lupa upgrade diri.</p>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="profile.jpg" alt="Haidar Habibi Al Farisi" />
+    </div>
+  </section>
+</section>
+
+<section id="about" style="display:none;"> ...isi aboutme... </section>
+<section id="contact" style="display:none;"> ...isi contact... </section>
+
+  
+</div>
+
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  background:
+    radial-gradient(circle at 20% 30%, #232526 0%, transparent 60%),
+    radial-gradient(circle at 80% 70%, #e3ff0c33 0%, transparent 70%),
+    linear-gradient(120deg, #232526 0%, #1a1a1a 100%);
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo span {
+  color: #aaa;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; 
+  text-align: center;
+  padding: 20px;
+}
+
+.nav-links {
+  display: flex;
+  text-align: center;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a {
+  display: inline-block;
+  padding: 6px 14px;     
+  border-radius: 18px;    
+  background: transparent;
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;       
+  transition: 
+    background 0.3s,
+    color 0.3s,
+    box-shadow 0.3s,
+    transform 0.2s;
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: #e3ff0c;
+  color: #232526;
+  box-shadow: 0 4px 16px #e3ff0c44;
+  border: 2px solid #e3ff0c;
+  transform: translateY(-2px) scale(1.05);
+  text-decoration: none;
+}
+
+
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px;
+}
+
+.content {
+  max-width: 50%;
+}
+
+.content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ffffff, #fff, #9cb000, #1a1a1a);
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradient-move 2s linear infinite;
+}
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.content p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.socials a {
+  color: #e3ff0c;
+  font-size: 22px;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+    transform: scale(1.2);
+  color:#ffffff;
+}
+
+.role h3 {
+  font-size: 20px;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.role p {
+  font-size: 14px;
+  color: #999;
+}
+
+.hero-img img {
+  width: 300px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.hero-img img:hover {
+  transform: scale(1.02) rotate(-1deg);
+  box-shadow: 0 8px 32px #e3ff0c;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .container {
+    padding: 0 8px;
+  }
+  .hero {
+    flex-direction: column;
+    padding: 40px 0;
+    text-align: center;
+  }
+  .content {
+    max-width: 100%;
+  }
+  .hero-img {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 4px;
+  }
+  .hero {
+    padding: 24px 0;
+  }
+  .content h1 {
+    font-size: 32px;
+  }
+  .hero-img img {
+    width: 220px; 
+  }
+  .nav-links {
+    gap: 16px;
+  }
+  .footer, .footer-marquee {
+    height: 32px;
+  }
+  .footer {
+    position: static; 
+  }
+  .hero-img {
+    margin-bottom: 40px; 
+    margin-top: -8px; 
+  }
+}
+
+.footer {
+  width: 100vw;
+  background: #232526;
+  color: #e3ff0c;
+  padding: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  box-shadow: 0 -2px 16px #e3ff0c22;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 38px; 
+  min-height: unset;
+  display: flex;
+  align-items: center;
+}
+
+.footer-marquee {
+  width: 100vw;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding: 0; 
+  position: relative;
+  height: 38px; 
+  display: flex;
+  align-items: center;
+}
+
+.footer-marquee span {
+  display: inline-block;
+  padding-left: 100vw;
+  animation: marquee-footer 18s linear infinite;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 38px;
+}
+
+.footer-marquee a {
+  color: #e3ff0c;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.2s;
+}
+.footer-marquee a:hover {
+  color: #fff;
+}
+
+.footer-marquee i {
+  margin-right: 4px;
+}
+
+@keyframes marquee-footer {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+@media (max-width: 600px) {
+  .footer-marquee span {
+    font-size: 11px;
+    line-height: 32px;
+  }
+  .footer, .footer-marquee {
+    height: 32px;
+  }
+}
+  </style>
+
+  <script>
+  const text = "Saya Adalah Seorang Mahasiswa Semester 2 Yang Ingin Menjadi Fullstack Developer";
+  const typingSpeed = 90; 
+  let index = 0;
+
+  function typeText() {
+    if (index < text.length) {
+      document.getElementById("typing-text").textContent += text.charAt(index);
+      index++;
+      setTimeout(typeText, typingSpeed);
+    }
+  }
+  typeText();
+
+  function showSection(section) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach((sec) => {
+      if (sec.id === section) {
+        sec.style.display = 'block';
+      } else {
+        sec.style.display = 'none';
+      }
+    });
+  }
+  </script>
+
+<footer class="footer">
+  <div class="footer-marquee">
+    <span id="footer-marquee-text">
+      &copy; 2025 Haidar Habibi Al Farisi &mdash;   Follow on 
+      <a href="https://github.com/haidaralfff" target="_blank"><i class="fab fa-github"></i> GitHub</a> &bull; 
+      <a href="https://www.instagram.com/dalfuserrx?igsh=Z2RhM25vM2ZxNWFi" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> &bull; 
+      <a href="https://www.tiktok.com/@darzzkun?_t=ZS-8xTU7OE4tB1&_r=1" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+    </span>
+  </div>
+</footer>
+</body>
+</html>

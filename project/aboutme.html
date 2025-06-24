@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Me</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background:
+        radial-gradient(circle at 20% 30%, #232526 0%, transparent 60%),
+        radial-gradient(circle at 80% 70%, #e3ff0c33 0%, transparent 70%),
+        linear-gradient(120deg, #232526 0%, #1a1a1a 100%);
+      color: #fff;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    #about-me {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    #about-me h2 {
+      font-size: 32px;
+      border-bottom: 2.5px solid #e3ff0c;
+      display: block;
+      margin: 0 auto 40px auto;
+      color: #e3ff0c;
+      letter-spacing: 2px;
+      background: transparent;
+      width: fit-content;
+      padding-bottom: 8px;
+      text-align: center;
+    }
+
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: center;
+      justify-content: center;
+      background: rgba(30,32,34,0.97);
+      border-radius: 22px;
+      box-shadow: 0 8px 32px #e3ff0c33, 0 1.5px 8px #0008;
+      padding: 36px 28px;
+      margin-top: 24px;
+    }
+
+    .about-image img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%; /* Jadikan lingkaran */
+      object-fit: cover;
+      box-shadow: 0 0 24px #e3ff0c33, 0 0 20px rgba(255,255,255,0.08);
+      border: 3px solid #e3ff0c44;
+      background: #232526;
+      margin-bottom: 8px;
+    }
+
+    .about-text {
+      max-width: 600px;
+      line-height: 1.7;
+      font-size: 17px;
+      color: #eaeaea;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+      min-height: 24px;
+      white-space: pre-line;
+      overflow: hidden;
+      animation: blink-cursor 0.7s steps(1) infinite;
+    }
+
+    @keyframes blink-cursor {
+      0%, 100% { border-color: #e3ff0c; }
+      50% { border-color: transparent; }
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px 8px;
+        gap: 18px;
+      }
+      .about-text {
+        font-size: 15px;
+        max-width: 98vw;
+        text-align: center;
+      }
+      .about-image img {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 14px;
+      }
+      #about-me {
+        padding: 32px 4vw;
+      }
+      #about-me h2 {
+        font-size: 22px;
+        margin-bottom: 24px;
+        padding-bottom: 6px;
+      }
+    }
+
+    .footer {
+      width: 100vw;
+      background: #232526;
+      color: #e3ff0c;
+      padding: 0;
+      position: fixed;      /* Tetap fixed di bawah */
+      left: 0;
+      bottom: 0;
+      z-index: 100;
+      box-shadow: 0 -2px 16px #e3ff0c22;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 38px;
+      min-height: unset;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start; /* Tambahkan ini agar isi footer tetap ke kiri seperti di index */
+    }
+
+    .footer-marquee {
+      width: 100vw;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      padding: 0;
+      position: relative;
+      height: 38px;
+      display: flex;
+      align-items: center;
+    }
+
+    .footer-marquee span {
+      display: inline-block;
+      padding-left: 100vw;
+      animation: marquee-footer 18s linear infinite;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 38px;
+    }
+
+    .footer-marquee a {
+      color: #e3ff0c;
+      text-decoration: none;
+      margin: 0 8px;
+      transition: color 0.2s;
+    }
+    .footer-marquee a:hover {
+      color: #fff;
+    }
+
+    .footer-marquee i {
+      margin-right: 4px;
+    }
+
+    @keyframes marquee-footer {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    @media (max-width: 600px) {
+      .footer-marquee span {
+        font-size: 11px;
+        line-height: 32px;
+      }
+      .footer, .footer-marquee {
+        height: 32px;
+      }
+      .footer {
+        position: fixed;   
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+      }
+      body {
+        padding-bottom: 32px; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <section id="about-me">
+    <h2>ABOUT ME</h2>
+    <div class="about-container">
+      <div class="about-image">
+        <img src="profile.jpg" alt="Profile Picture">
+      </div>
+      <div class="about-text">
+        <p id="typing-about-1"></p>
+        <p id="typing-about-2"></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const aboutTexts = [
+      "Hi! I'm Haidar, a future fullstack developer and tech enthusiast who loves sharing creative, fun, and inspiring projects. I enjoy turning lines of code—especially in my favorite language, Python—into interactive websites and tools that bring ideas to life.",
+      "Beyond coding, I explore modern UI/UX trends, build personal portfolio sites, and craft content that blends logic and style. Whether it's frontend finesse or backend power, I aim to show that programming can be both cool and meaningful. Let’s code something awesome!"
+    ];
+
+    
+    function typeParagraph(text, elementId, callback) {
+      let i = 0;
+      function type() {
+        if (i <= text.length) {
+          document.getElementById(elementId).textContent = text.slice(0, i);
+          i++;
+          setTimeout(type, 10); 
+          setTimeout(callback, 400); 
+        }
+      }
+      type();
+    }
+
+    typeParagraph(aboutTexts[1], "typing-about-1", function() {
+      typeParagraph(aboutTexts[2], "typing-about-2");
+    });
+  </script>
+
+  <footer class="footer">
+    <div class="footer-marquee">
+      <span id="footer-marquee-text">
+        &copy; 2025 Haidar Habibi Al Farisi &mdash; Portfolio | Follow on 
+        <a href="https://github.com/haidaralfff" target="_blank"><i class="fab fa-github"></i> GitHub</a> &bull; 
+        <a href="https://www.instagram.com/dalfuserrx?igsh=Z2RhM25vM2ZxNWFi" target="_blank"><i class="fab fa-instagram"></i> Instagram</a> &bull; 
+        <a href="https://www.tiktok.com/@darzzkun?_t=ZS-8xTU7OE4tB1&_r=1" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>

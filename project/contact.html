@@ -129,6 +129,44 @@
           font-size: 16px;
         }
       }
+
+      .about-text {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .about-text p {
+        font-size: 18px;
+        color: #eaeaea;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+      }
+
+      #typing-about-1 {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+      }
+
+      #typing-about-2 {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typing 3.5s steps(30, end) 4s forwards, blink-caret 0.75s step-end infinite;
+      }
+
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #e3ff0c }
+      }
     </style>
   </head>
   <body>
@@ -142,5 +180,10 @@
         </a>
       </div>
     </section>
+
+    <div class="about-text">
+      <p id="typing-about-1"></p>
+      <p id="typing-about-2"></p>
+    </div>
   </body>
 </html>
